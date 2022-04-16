@@ -2,13 +2,23 @@
 
 token=$(printenv dctoken) #just work. Use: export dctoken=mfa.XXXXXXX.XXXXXX
 
+if [ ! -d ~/.config/BetterDiscord/plugins/ ]; then
+	echo Nie znaleźono katalogu ~/.config/BetterDiscord/plugins/ 
+	echo Prawdopodobnie oznacza to że nie masz zainstalowanego BetterDiscord. Sprawdź to.
+	exit
+fi
+
 if [ ! -e ~/.config/BetterDiscord/plugins/FileFromCLI.plugin.js ]; then
-	echo Plik ~/.config/BetterDiscord/plugins/FileFromCLI.plugin.js nie istnieje. 
+	echo Plik ~/.config/BetterDiscord/plugins/FileFromCLI.plugin.js nie istnieje.
+	echo Pobieranie pliku.
+	curl https://raw.githubusercontent.com/koliwbr/DiscordFileFromCLI/master/FileFromCLI.plugin.js -o ~/.config/BetterDiscord/plugins/FileFromCLI.plugin.js
+	echo Pobrano. Włącz plugin i spróbuj ponownie.
 	exit 64
 fi
 
 if [ ! -e ~/.config/BetterDiscord/plugins/FileFromCLI.config.json ]; then
 	echo Plik ~/.config/BetterDiscord/plugins/FileFromCLI.config.json nie istnieje. 
+	echo Najprawdopodobniej nie włączono pluginu. Sprawdź to.
 	exit 64
 fi
 
