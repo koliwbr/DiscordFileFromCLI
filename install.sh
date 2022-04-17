@@ -9,7 +9,7 @@ NC='\033[0m'
 
 echo
 
-if [ ! -n "$dctokenWWW" ]; then
+if [ ! -n "$dctoken" ]; then
 	echo -e "${RED} Nie znaleziono zmiennej \$dctoken${NC}"
 	echo Ustaw zmienną środowiskową dctoken na token za pomocą którego ma zostać wysłana wiadomość 
 	echo 'Dla konta bota użyj "Bot XXXXXXXXX.XXX.XXXXxXXxXXX" a dla zwykłych użytkowników pomiń "Bot "'
@@ -46,7 +46,7 @@ curl https://raw.githubusercontent.com/koliwbr/DiscordFileFromCLI/master/sendtod
 
 echo
 
-if [ -n "$dctokenWWW" ]; then
+if [ -n "$dctoken" ]; then
 	echo -e "${GREEN}  Zainstalowno poprawne!${NC}"
 else
 	echo -e "${YELLOW}  Zainstalowno ale brak tokenu, bez niego skrypt nie zadziała!${NC}"
