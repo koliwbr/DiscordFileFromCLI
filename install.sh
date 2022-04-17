@@ -12,3 +12,24 @@ if [ -f ~/.local/bin/sendtodiscord ]; then
 	echo Uwaga! Zostanie on nadpisany
 fi
 
+################################################
+
+if [ ! -d ~/.config/BetterDiscord/plugins/ ]; then
+	echo Nie znaleźono katalogu ~/.config/BetterDiscord/plugins/ 
+	echo Prawdopodobnie oznacza to że nie masz zainstalowanego BetterDiscord.
+	echo Instrukcję znajdziesz tutaj 'https://github.com/BetterDiscord/BetterDiscord/blob/main/README.md#installation'
+	exit 1
+fi
+
+
+echo Pobieranie wtyczki...
+curl https://raw.githubusercontent.com/koliwbr/DiscordFileFromCLI/master/FileFromCLI.plugin.js \
+-o ~/.config/BetterDiscord/plugins/FileFromCLI.plugin.js && echo Pobrano wtyczkę. || exit 1
+
+
+echo Pobieranie skryptu...
+curl https://raw.githubusercontent.com/koliwbr/DiscordFileFromCLI/master/sendtodiscord.sh \
+-o ~/.local/bin/sendtodiscord && echo Pobrano skrypt. || exit 1
+
+
+
