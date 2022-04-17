@@ -28,7 +28,7 @@ fi
 ################################################
 
 if [ ! -d ~/.config/BetterDiscord/plugins/ ]; then
-	echo -e "${RED} Nie znaleźono katalogu ~/.config/BetterDiscord/plugins/ ${NC}"
+	echo -e "${RED} Nie znaleziono katalogu ~/.config/BetterDiscord/plugins/ ${NC}"
 	echo Prawdopodobnie oznacza to że nie masz zainstalowanego BetterDiscord.
 	echo Instrukcję znajdziesz tutaj 'https://github.com/BetterDiscord/BetterDiscord/blob/main/README.md#installation'
 	echo 
