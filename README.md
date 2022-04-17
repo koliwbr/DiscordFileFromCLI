@@ -5,4 +5,6 @@ Aktualnie wspierany jest tylko Linux i stabilna gałąź aplikacji discorda.
 
 # Instalacja
 Skrypt instalacyjny jest teraz średnio gotowy, ale jest.
-Uzyj `bash -c "$(curl https://raw.githubusercontent.com/koliwbr/DiscordFileFromCLI/master/install.sh -s)" `
+Uzyj ```bash
+bash -c "$(curl https://raw.githubusercontent.com/koliwbr/DiscordFileFromCLI/master/install.sh -s)" 
+```
