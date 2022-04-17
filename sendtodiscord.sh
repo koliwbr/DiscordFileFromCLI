@@ -1,6 +1,6 @@
-#! /bin/bash
+#!/bin/bash
 
-token=$(printenv dctoken) #just work. Use: export dctoken=mfa.XXXXXXX.XXXXXX
+token=$dctoken #just work. Use: export dctoken=mfa.XXXXXXX.XXXXXX
 
 if [ ! -d ~/.config/BetterDiscord/plugins/ ]; then
 	echo Nie znaleźono katalogu ~/.config/BetterDiscord/plugins/ 
