@@ -43,6 +43,7 @@ fi
 echo Pobieranie skryptu...
 curl https://raw.githubusercontent.com/koliwbr/DiscordFileFromCLI/master/sendtodiscord.sh \
 -o ~/.local/bin/sendtodiscord && echo Pobrano skrypt. || ( echo -e "${RED} Błąd pobierania skryptu, przerywanie ${NC}";exit 1 )
+chmod +x .local/bin/sendtodiscord
 
 echo
 
